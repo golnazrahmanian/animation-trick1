@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation trick</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            text-transform: uppercase;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: #0a183d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container>div {
+            width: 50%;
+            height: 80%;
+            /* border: 1px solid white; */
+        }
+
+        .music>div:nth-of-type(1) {
+            width: 100%;
+            height: 40%;
+            /* background-color: #be6c6c; */
+            position: relative;
+            overflow: hidden;
+        }
+        .music>div:nth-of-type(1):hover div{
+            top: 45%;
+        }
+
+        .music>div:nth-of-type(1)>figure {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .music>div:nth-of-type(1)>figure>img {
+            width: 30%;
+            height: 30%;
+            border-radius: 15px;
+        }
+        /* .music>div:nth-of-type(1)>figure>img:hover {
+            box-shadow: 0px 5px 50px rgba(208, 199, 227, 0.2);;
+        } */
+        .music>div:nth-of-type(1)>div{
+            width: 15%;
+            height: 15%;
+            /* background-color: #0d0202; */
+            position: absolute;
+            top: 110%;
+            left: 42%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: aliceblue;
+            transition: 0.4s;
+            font-size: 15px;
+
+        }
+
+        .music>div:nth-of-type(2) {
+            width: 100%;
+            height: 40%;
+            /* background-color: #be6c87; */
+        }
+        .animation{
+            width: 10px;
+            height: 50px;
+            left: 30%;
+            top: 40%;
+            height: 30px;
+            margin: 2px;
+            display: inline-block;
+            /* background-color:blue; */
+            position: relative;
+            animation: 1s infinite ease scaley;
+            border-radius: 10px;
+;
+        }
+        .box2{animation-delay: 0.1s;}
+        .box3{animation-delay: 0.2s;}
+        .box4{animation-delay: 0.3s;}
+        .box5{animation-delay: 0.4s;}
+        .box6{animation-delay: 0.5s;}
+        .box7{animation-delay: 0.6s;}
+        .box8{animation-delay: 0.6s;}
+        .box9{animation-delay: 0.6s;}
+        .box10{animation-delay: 0.7s;}
+        .box11{animation-delay: 0.8s;}
+        .box12{animation-delay: 0.9s;}
+        .box13{animation-delay: 1s;}
+        .box14{animation-delay: 1.1s;}
+        @keyframes scaley{
+            0%{transform: scaleY(0);
+            background-color: #fc0254;}
+            100%{transform: scaleY(3);
+            background-color: #0a3f78;}
+        }
+        .music>div:nth-of-type(3){
+            width: 100%;
+            height: 20%;
+            /* background-color: #bada51; */
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .music>div:nth-of-type(3)>div{
+            width: 30%;
+            height: 60%;
+            border-radius: 20px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            transition: 1s;
+        }
+        .music>div:nth-of-type(3)>div:hover{
+            font-size: 20px;
+        }
+        .music>div:nth-of-type(3)>div:nth-of-type(1){
+            background-color: #fc0254;
+        }
+        .music>div:nth-of-type(3)>div:nth-of-type(2){
+            background-color: #0a3f78;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="music">
+            <div>
+                <figure>
+                    <img src="image/1.jpg" alt="">
+                </figure>
+                <div>
+                    <span>enjoy it</span>
+
+                </div>
+            </div>
+            <div>
+                <div class="animation box1"></div>
+                <div class="animation box2"></div>
+                <div class="animation box3"></div>
+                <div class="animation box4"></div>
+                <div class="animation box5"></div>
+                <div class="animation box6"></div>
+                <div class="animation box7"></div>
+                <div class="animation box8"></div>
+                <div class="animation box9"></div>
+                <div class="animation box10"></div>
+                <div class="animation box11"></div>
+                <div class="animation box12"></div>
+                <div class="animation box13"></div>
+                <div class="animation box14"></div>
+            </div>
+            <div>
+                <div>download now</div>
+                <div>start free trail</div>
+            </div>
+        </div>
+        <div>
+            <figure>
+                <img src="image/hero-bg.png" alt="">
+            </figure>
+        </div>
+
+    </div>
+</body>
+
+</html>
